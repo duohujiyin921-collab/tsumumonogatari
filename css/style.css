@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+body {
+    background-color: #c8dfef;
+    max-width: 100%;
+}
+
+.header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.site-name {
+    font-size: 45px;
+    margin: 50px 50px 0 50px;
+    font-family: "ta-shizuku", sans-serif;
+}
+
+.menu {
+    color: #19448e;
+    font-family: "ads-mambo", sans-serif;
+    /* font-weight: 400;
+    font-style: normal; */
+    display: flex;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    height: 120px;
+    line-height: 60px;
+    display: block;
+    transition: .3s;
+    font-weight: bold;
+    position: relative;
+    padding: 0 15px 60px;
+    /* box-sizing: border-box; */
+}
+
+nav ul li a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    line-height: 1;
+    content: attr(data-item);
+    line-height: 50px;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    margin-top: -60px;
+    color: #fff;
+}
+
+/* .menu li {
+    margin-right: 30px;
+} */
+
+.title {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+.scroll_down {
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+}
+
+.scroll_down a {
+    position: absolute;
+    left: -40px;
+    bottom: 170px;
+    color: #19448e;
+    font-size: 20px;
+    font-family: "ads-mambo", sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.scroll_down:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #19448e;
+    animation:
+        circlemove 1.6s ease-in-out infinite,
+        cirlemovehide 1.6s ease-out infinite;
+}
+
+@keyframes circlemove {
+    0% {
+        bottom: 160px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes cirlemovehide {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.scroll_down:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 160px;
+    background: #19448e;
+}
+
+
+.sab-title {
+    font-size: 35px;
+    margin-top: 480px;
+    text-align: center;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+}
+
+.text {
+    font-size: 23px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    line-height: 1.73;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 500;
+}
+
+.profile {
+    max-width: 100%;
+    height: 800px;
+    background-color: #b0c4de;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.text-turn {
+    width: 25%;
+    position: absolute;
+    top: 200px;
+    left: 80px;
+}
+
+.cat {
+    width: 25%;
+    position: absolute;
+    top: 280px;
+    left: 200px;
+}
+
+.profile-text {
+    margin-top: 280px;
+    margin-left: 50px;
+}
+
+.profile-title {
+    font-size: 45px;
+    font-family: "ads-mambo", sans-serif;
+}
+
+.profile-ruby {
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+}
+
+.name {
+    font-size: 40px;
+    margin-top: 70px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+}
+
+.ruby {
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: "ads-mambo", sans-serif;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.Btn {
+    border: 2px solid #19448e;
+    margin-top: 600px;
+    margin-right: 8%;
+    width: 178px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #19448e;
+    font-size: 16px;
+    transition: .4s;
+    border-radius: 50px;
+    font-family: "ads-mambo", sans-serif;
+}
+
+.Btn:hover {
+    color: #f6f7f8;
+    background: #19448e;
+    transition: .4s;
+}
+
+.works-title {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 150px;
+    font-family: "ads-mambo", sans-serif;
+}
+
+.works-text {
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 150px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+
+}
+
+.slider {
+    bottom: 100px;
+}
+
+.slider img {
+    width: 100%;
+    /* align-items: flex-end */
+}
+
+/* .box {
+    width: 267px;
+    height: 350px;
+    background-color: #f6f7f8;
+    border-radius: 15%;
+    margin: 0 30px 0 40px;
+} */
+
+.slick-prev {
+    left: 15%;
+    top: 500px;
+    z-index: 1000;
+}
+
+.slick-next {
+    right: 15%;
+    top: 500px;
+
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    font-size: 10px;
+    color: #19448e;
+}
+
+
+.slick-next:before {
+    color: #19448e;
+    width: 78px;
+    height: 12px;
+    border-bottom: 3px solid #19448e;
+    border-right: 3px solid #19448e;
+    display: block;
+    /* transform: rotate(45deg); */
+}
+
+.Btn-works {
+    border: 2px solid #19448e;
+    margin-top: 50px;
+    margin-left: 75%;
+    margin-bottom: 168px;
+    width: 178px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #19448e;
+    font-size: 16px;
+    transition: .4s;
+    border-radius: 50px;
+    font-family: "ads-mambo", sans-serif;
+}
+
+.Btn-works:hover {
+    color: #f6f7f8;
+    background: #19448e;
+    transition: .4s;
+}
+
+.contact {
+    height: 870px;
+    width: 100%;
+    background-color: #b0c4de;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 25px;
+    padding-top: 200px;
+    font-family: "ads-mambo", sans-serif;
+}
+
+.contact-text {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 90px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 500;
+}
+
+.letter {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.letter a img {
+    width: 27%;
+}
+
+.copyright {
+    font-size: 17px;
+    text-align: center;
+    margin-top: 150px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+}
+
+.top a img {
+    width: 100px;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+}
