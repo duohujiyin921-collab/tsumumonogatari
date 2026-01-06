@@ -38,6 +38,8 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
+
+
 </head>
 
 <body>
@@ -46,9 +48,9 @@
             <h1 class="site-name"><a href="./index.html">紡モノ語</a></h1>
             <nav class="pc-nav">
                 <ul class="menu">
-                    <li><a href="" data-item="プロフィール">profile</a></li>
-                    <li><a href="" data-item="作品一覧">works</a></li>
-                    <li><a href="" data-item="お問い合わせ">contact</a></li>
+                    <li><a href="#header" data-item="プロフィール">profile</a></li>
+                    <li><a href="./works.html" data-item="作品一覧">works</a></li>
+                    <li><a href="./contact.html" data-item="お問い合わせ">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -245,7 +247,7 @@
                         </svg>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/1x/1x/profile-photo.png" alt="myphoto">
+                        <img src="images/1x/3x/3x/profile-photo@3x.png" alt="myphoto">
                     </div>
                 </div>
             </div>
@@ -253,7 +255,7 @@
                 <div class="name">多湖姫音</div>
                 <div class="name-ruby">tago hinari</div>
                 <p class="text">
-                    2005年生まれ、愛知県在住。<br>マイペースでちょっぴり猫みたいな性格で興味を惹かれると<br>夢中になって気づくと時間を忘れ没頭してしまいます。<br>その集中力を活かし丁寧に向き合いながら見る人の心に<br>残るデザインを作るデザイナーを目指しています。
+                    2005年生まれ、愛知県在住。<br>マイペースでちょっぴり猫みたいな性格で興味を惹かれると夢中になって気づくと時間を忘れ没頭してしまいます。<br>その集中力を活かし丁寧に向き合いながら見る人の心に残るデザインを作るデザイナーを目指しています。
                 </p>
                 <div class="hobby">hobby</div>
                 <p class="hobby-text">
@@ -364,9 +366,9 @@
         </div>
     </section>
 
-    <section class="contact">
-        <h2 class="contact-title">contact</h2>
-        <p class="contact-text">制作のご依頼やご相談はこちらからお問い合わせください</p>
+    <section class="contact-top">
+        <h2 class="contact-title-top">contact</h2>
+        <p class="contact-text-top">制作のご依頼やご相談はこちらからお問い合わせください</p>
         <div class="letter">
             <a href=""><img src="images/SVG/letter.svg" alt=" letter"></a>
         </div>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'qdn8awl',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'qdn8awl',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'qdn8awl',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+</head>
+
+<body>
+
+    <section>
+        <div class="header" id="header">
+            <h1 class="site-name"><a href="./index.html">紡モノ語</a></h1>
+            <nav class="pc-nav">
+                <ul class="menu">
+                    <li><a href="./profile.html" data-item="プロフィール">profile</a></li>
+                    <li><a href="./works.html" data-item="作品一覧">works</a></li>
+                    <li><a href="#heder" data-item="お問い合わせ">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <section class="contact-main">
+        <h2 class="contact-title">contact</h2>
+        <p class="contact-sub-title">お問い合わせ</p>
+        <div class="number-box">
+            <div class="number">1</div>
+            <div class="number-item">2</div>
+        </div>
+        <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSfgurpcux05ypibKgB88CPsuBtFySHMqGuqvNp3FHjaVRkf6w/viewform?usp=header"
+            method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="contact-flex">
+                <label class="contact-text" for="">お問い合わせ種別</label>
+                <div class="category-main">
+                    <label for="request">制作物のご依頼について</label>
+                    <input id="request" type="radio" name="category" value="制作物のご依頼について">
+                    <label for="question">サイトに関する質問</label>
+                    <input dir="question" type="radio" name="category" value="サイトに関する質問">
+                    <label for="design">デザインのご相談</label>
+                    <input id="design" type="radio" name="category" value="デザインのご相談">
+                    <label for="others">その他</label>
+                    <input id="others" type="radio" name="category" value="その他">
+                </div>
+            </div>
+            <div class="contact-item">
+                <label class="contact-text" for="name">お名前</label>
+                <input type="text" placeholder="山田 太郎" required="required" class="name-box" id="name"
+                    name="entry.860177830">
+            </div>
+            <div class="contact-item">
+                <label class="contact-text" for="mail">メールアドレス</label>
+                <input class="mail-box" type="email" required="required" placeholder="sample@gmail.com" id="mail"
+                    name="entry.1518326848">
+            </div>
+            <div class="contact-item">
+                <label class="contact-text" for="tel">電話番号ハイフンなし</label>
+                <input class="tel-box" type="tel" required="required" placeholder="00000000000" id="tel"
+                    name="entry.1648122010">
+            </div>
+            <div class="contact-item">
+                <label class="contact-text" for="inpuiry">お問い合せ内容</label>
+                <textarea class="contact-box" name="" id="inpuiry" required="required" rows="5"
+                    placeholder="お問い合せ内容をご記入ください" name="entry.1226891506"></textarea>
+            </div>
+            <div class="send">
+                <button class="send-item" type="submit">送信</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

@@ -58,9 +58,23 @@
                     <li><a href="./profile.html" data-item="プロフィール">profile</a></li>
                     <li><a href="./works.html" data-item="作品一覧">works</a>
                     </li>
-                    <li><a href="" data-item="お問い合わせ">contact</a></li>
+                    <li><a href="./contact.html" data-item="お問い合わせ">contact</a></li>
                 </ul>
             </nav>
+
+            <!-- <div class="sp-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="sp-nav">
+                <ul class="menu">
+                    <li><a href="./profile.html" data-item="プロフィール">profile</a></li>
+                    <li><a href="./works.html" data-item="作品一覧">works</a>
+                    </li>
+                    <li><a href="./contact.html" data-item="お問い合わせ">contact</a></li>
+                </ul>
+            </nav> -->
         </div>
     </section>
 
@@ -224,7 +238,7 @@
             <p class="name-top">たごひなり</p>
             <p class="ruby">tagohinari</p>
         </div>
-        <a href="" class="Btn">view more</a>
+        <a href="./profile.html" class="Btn">view more</a>
     </section>
 
 
@@ -262,15 +276,15 @@
             </div>
         </div>
         <!-- </div> -->
-        <a href="" class="Btn-works">view more</a>
+        <a href="./works.html" class="Btn-works">view more</a>
     </section>
 
 
-    <section class="contact">
-        <h2 class="contact-title">contact</h2>
-        <p class="contact-text">制作のご依頼やご相談はこちらからお問い合わせください</p>
+    <section class="contact-top">
+        <h2 class="contact-title-top">contact</h2>
+        <p class="contact-text-top">制作のご依頼やご相談はこちらからお問い合わせください</p>
         <div class="letter">
-            <a href=""><img src="images/SVG/letter.svg" alt=" letter"></a>
+            <a href="./contact.html"><img src="images/SVG/letter.svg" alt=" letter"></a>
         </div>
         <p class="copyright">©2025 hinari</p>
     </section>
@@ -282,6 +296,16 @@
 
     <script>
         $(function () {
+            $('.sp-btn').on('click', function () {
+                $('.sp-btn').toggleClass('open');
+                $('.sp-nav').fadeToggle();
+            })
+
+
+
+
+
+
             $('.slick').slick({
                 autoplay: true,
                 autoplaySpeed: 3000,
@@ -296,6 +320,8 @@
                 prevArrow: '<img src="images/1x/1x/slider-arrow-prev.png" class="slide-arrow prev-arrow">',
                 nextArrow: '<img src="images/1x/1x/slider-arrow-next.png" class="slide-arrow next-arrow">',
             })
+
+
 
 
         })
