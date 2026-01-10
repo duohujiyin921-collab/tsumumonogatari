@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+
     <script>
         (function (d) {
             var config = {
@@ -43,6 +48,8 @@
 </head>
 
 <body>
+
+    <div class="rain_bg"></div>
     <section>
         <div class="header" id="header">
             <h1 class="site-name"><a href="./index.html">紡モノ語</a></h1>
@@ -50,6 +57,18 @@
                 <ul class="menu">
                     <li><a href="#header" data-item="プロフィール">profile</a></li>
                     <li><a href="./works.html" data-item="作品一覧">works</a></li>
+                    <li><a href="./contact.html" data-item="お問い合わせ">contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="sp-btn">
+                <span></span>
+            </div>
+            <nav class="sp-nav">
+                <ul>
+                    <li><a href="./profile.html" data-item="プロフィール">profile</a></li>
+                    <li><a href="./works.html" data-item="作品一覧">works</a>
+                    </li>
                     <li><a href="./contact.html" data-item="お問い合わせ">contact</a></li>
                 </ul>
             </nav>
@@ -370,7 +389,7 @@
         <h2 class="contact-title-top">contact</h2>
         <p class="contact-text-top">制作のご依頼やご相談はこちらからお問い合わせください</p>
         <div class="letter">
-            <a href=""><img src="images/SVG/letter.svg" alt=" letter"></a>
+            <a href="./contact.html"><img src="images/SVG/letter.svg" alt=" letter"></a>
         </div>
         <p class="copyright">©2025 hinari</p>
     </section>
@@ -378,6 +397,37 @@
     <div class="top">
         <a href="#header"><img src="images/SVG/top.svg" alt="top"></a>
     </div>
+
+    <script>
+        $(function () {
+            $('.sp-btn').on('click', function () {
+                $('.sp-btn').toggleClass('open');
+                $('.sp-nav').fadeToggle();
+            })
+        })
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.rain_bg');
+            const columns = 10;
+
+            function createRain(rainClass, minSize, maxSize) {
+                const rain = document.createElement('span');
+                rain.className = `rain ${rainClass}`;
+                rain.style.animationDelay = `${Math.random() * 0.5}s`;
+
+                const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+                rain.style.width = `${size}px`;
+                rain.style.height = `${size}px`;
+                rain.style.left = Math.random() * 100 + '%';
+                container.appendChild(rain);
+
+                setTimeout(() => { rain.remove(); }, 8000);
+            }
+
+            setInterval(() => createRain('rain-1', 30, 50), 800);
+            setInterval(() => createRain('rain-2', 26, 44), 1100);
+        });
+    </script>
 </body>
 
 </html>

@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+
     <script>
         (function (d) {
             var config = {
@@ -42,6 +47,7 @@
 
 <body>
 
+    <div class="rain_bg"></div>
     <section>
         <div class="header" id="header">
             <h1 class="site-name"><a href="./index.html">紡モノ語</a></h1>
@@ -52,6 +58,20 @@
                     <li><a href="./contact.html" data-item="お問い合わせ">contact</a></li>
                 </ul>
             </nav>
+
+
+
+            <div class="sp-btn">
+                <span></span>
+            </div>
+            <nav class="sp-nav">
+                <ul>
+                    <li><a href="./profile.html" data-item="プロフィール">profile</a></li>
+                    <li><a href="./works.html" data-item="作品一覧">works</a>
+                    </li>
+                    <li><a href="./contact.html" data-item="お問い合わせ">contact</a></li>
+                </ul>
+            </nav>
         </div>
     </section>
 
@@ -59,13 +79,17 @@
         <h2 class="works-title">works</h2>
         <div class="works-sub-title">作品一覧</div>
         <div class="works-botton-unity">
-            <span class="works-botton-color"><a href="">ALL</a></span>
-            <span class="works-botton"><a href="">LP</a></span>
-            <span class="works-botton"><a href="">webサイト</a></span>
-            <span class="works-botton"><a href="">バナー</a></span>
+            <div class="works-botton-main">
+                <span class="works-botton-color" data-group=""><a href="">ALL</a></span>
+                <span class="works-botton" data-group="lp"><a href="">LP</a></span>
+            </div>
+            <div class="works-botton-main">
+                <span class="works-botton" data-group="webサイト"><a href="">webサイト</a></span>
+                <span class="works-botton" data-group="バナー"><a href="">バナー</a></span>
+            </div>
         </div>
         <div class="works">
-            <div>
+            <div class="works-botton-item" data-group="" data-group="バナー">
                 <a href="./mobile.html">
                     <div class="works-box">
                         <img src="images/1x/3x/3x/mobile@3x.png" alt="mobile">
@@ -74,7 +98,7 @@
                 <p class="works-opus">デザスタmobile</p>
                 <p class="hashtag">#デザイン #バナー</p>
             </div>
-            <div>
+            <div class="works-botton-item" data-group="" data-group="バナー">
                 <a href="./ice.html">
                     <div class="works-box">
                         <img src="images/1x/3x/3x/ice@3x.png" alt="ice">
@@ -83,7 +107,7 @@
                 <p class="works-opus">ICE CREAM</p>
                 <p class="hashtag">#デザイン #バナー</p>
             </div>
-            <div>
+            <div class="works-botton-item" data-="" data-group="バナー">
                 <a href="./burger-pop.html">
                     <div class="works-box">
                         <img src="images/1x/3x/3x/burger-pop@3x.png" alt="burger-pop">
@@ -92,7 +116,7 @@
                 <p class="works-opus">デラックスバーガー</p>
                 <p class="hashtag">#デザイン #バナー</p>
             </div>
-            <div>
+            <div class="works-botton-item" data-group="" data-group="バナー">
                 <a href="./burger.html">
                     <div class="works-box">
                         <img src="images/1x/3x/3x/burger@3x.png" alt="burger">
@@ -101,7 +125,7 @@
                 <p class="works-opus">デラックスバーガー</p>
                 <p class="hashtag">#デザイン #バナー</p>
             </div>
-            <div>
+            <div class="works-botton-item" data-group="" data-group="lp">
                 <a href="./lp.html">
                     <div class="works-box">
                         <img src="images/1x/3x/3x/lp-mockup@3x.png" alt="lp-trace">
@@ -110,7 +134,7 @@
                 <p class="works-opus">WORKERS</p>
                 <p class="hashtag">#デザイン #LP</p>
             </div>
-            <div>
+            <div class="works-botton-item" data-group="" data-group="webサイト">
                 <a href="./hair.html">
                     <div class="works-box">
                         <img src="images/1x/3x/3x/hair-mockup@3x.png" alt="life-hair">
@@ -119,7 +143,7 @@
                 <p class="works-opus">LIFE hair design</p>
                 <p class="hashtag">＃デザイン #webサイト</p>
             </div>
-            <div>
+            <div class="works-botton-item" data-group="" data-group="webサイト">
                 <a href="./cafe.html">
                     <div class="works-box">
                         <img src="images/1x/3x/3x/cafe-mockup@3x.png" alt="cafe">
@@ -128,7 +152,7 @@
                 <p class="works-opus">DESIGN CAFE</p>
                 <p class="hashtag">#コーディング #webサイト</p>
             </div>
-            <div>
+            <div class="works-botton-item" data-group="" data-group="バナー">
                 <a href="./bread.html">
                     <div class="works-box">
                         <img src="images/1x/3x/3x/bread@3x.png" alt="bread">
@@ -137,7 +161,7 @@
                 <p class="works-opus">パンマルシェ</p>
                 <p class="hashtag">#デザイン #バナー</p>
             </div>
-            <div>
+            <div class="works-botton-item" data-group="" data-group="バナー">
                 <a href="./drink.html">
                     <div class="works-box">
                         <img src="images/1x/3x/3x/drink@3x.png" alt="drink">
@@ -161,6 +185,68 @@
     <div class="top">
         <a href="#header"><img src="images/SVG/top.svg" alt="top"></a>
     </div>
+
+
+    <script>
+
+        $(function () {
+            $('.sp-btn').on('click', function () {
+                $('.sp-btn').toggleClass('open');
+                $('.sp-nav').fadeToggle();
+            })
+        })
+
+
+        var worksbottoncolor = '.works-botton-color';   // 絞り込む項目名
+        var worksbottonitem = '.works-botton-item';       // 絞り込み対象のコンテンツ
+        var hideClass = 'hide';         // 絞り込み対象外のclass
+        var showClass = 'show';     // 選択中のclass
+
+        $(function () {
+            $(worksbottoncolor).on('click', function () {
+                $(worksbottoncolor).removeClass(showClass);
+                var group = $(this).addClass(showClass).data('group');
+                search_filter(group);
+            });
+        });
+
+        function search_filter(group) {
+            $().removeClass(hideClass);
+            if (group === '') {
+                return;
+            }
+            for (var i = 0; i < $(worksbottonitem).length; i++) {
+                var itemData = $(worksbottonitem).eq(i).data('group');
+                if (itemData !== group) {
+                    $(worksbottonitem).eq(i).addClass(hideClass);
+                }
+            }
+        }
+
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.rain_bg');
+            const columns = 10;
+
+            function createRain(rainClass, minSize, maxSize) {
+                const rain = document.createElement('span');
+                rain.className = `rain ${rainClass}`;
+                rain.style.animationDelay = `${Math.random() * 0.5}s`;
+
+                const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+                rain.style.width = `${size}px`;
+                rain.style.height = `${size}px`;
+                rain.style.left = Math.random() * 100 + '%';
+                container.appendChild(rain);
+
+                setTimeout(() => { rain.remove(); }, 8000);
+            }
+
+            setInterval(() => createRain('rain-1', 30, 50), 800);
+            setInterval(() => createRain('rain-2', 26, 44), 1100);
+        });
+    </script>
 </body>
 
 </html>

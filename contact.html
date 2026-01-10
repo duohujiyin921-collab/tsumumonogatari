@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+
     <script>
         (function (d) {
             var config = {
@@ -42,7 +47,7 @@
 </head>
 
 <body>
-
+    <div class="rain_bg"></div>
     <section>
         <div class="header" id="header">
             <h1 class="site-name"><a href="./index.html">紡モノ語</a></h1>
@@ -51,6 +56,19 @@
                     <li><a href="./profile.html" data-item="プロフィール">profile</a></li>
                     <li><a href="./works.html" data-item="作品一覧">works</a></li>
                     <li><a href="#heder" data-item="お問い合わせ">contact</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="sp-btn">
+                <span></span>
+            </div>
+            <nav class="sp-nav">
+                <ul>
+                    <li><a href="./profile.html" data-item="プロフィール">profile</a></li>
+                    <li><a href="./works.html" data-item="作品一覧">works</a>
+                    </li>
+                    <li><a href="./contact.html" data-item="お問い合わせ">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -64,20 +82,21 @@
             <div class="number">1</div>
             <div class="number-item">2</div>
         </div>
+
         <form
-            action="https://docs.google.com/forms/d/e/1FAIpQLSfgurpcux05ypibKgB88CPsuBtFySHMqGuqvNp3FHjaVRkf6w/viewform?usp=header"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfgurpcux05ypibKgB88CPsuBtFySHMqGuqvNp3FHjaVRkf6w/formResponse"
             method="POST" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="contact-flex">
                 <label class="contact-text" for="">お問い合わせ種別</label>
                 <div class="category-main">
+                    <input id="request" type="radio" value="制作物のご依頼について" name="entry.1947247424">
                     <label for="request">制作物のご依頼について</label>
-                    <input id="request" type="radio" name="category" value="制作物のご依頼について">
+                    <input id="question" type="radio" value="サイトに関する質問" name="entry.1947247424">
                     <label for="question">サイトに関する質問</label>
-                    <input dir="question" type="radio" name="category" value="サイトに関する質問">
+                    <input id="design" type="radio" value="デザインのご相談" name="entry.1947247424">
                     <label for="design">デザインのご相談</label>
-                    <input id="design" type="radio" name="category" value="デザインのご相談">
+                    <input id="others" type="radio" value="その他" name="entry.1947247424">
                     <label for="others">その他</label>
-                    <input id="others" type="radio" name="category" value="その他">
                 </div>
             </div>
             <div class="contact-item">
@@ -92,19 +111,62 @@
             </div>
             <div class="contact-item">
                 <label class="contact-text" for="tel">電話番号ハイフンなし</label>
-                <input class="tel-box" type="tel" required="required" placeholder="00000000000" id="tel"
-                    name="entry.1648122010">
+                <input class="tel-box" type="tel" placeholder="00000000000" id="tel" name="entry.1648122010">
             </div>
             <div class="contact-item">
                 <label class="contact-text" for="inpuiry">お問い合せ内容</label>
-                <textarea class="contact-box" name="" id="inpuiry" required="required" rows="5"
-                    placeholder="お問い合せ内容をご記入ください" name="entry.1226891506"></textarea>
+                <textarea class="contact-box" id="inpuiry" required="required" rows="5" placeholder="お問い合せ内容をご記入ください"
+                    name="entry.1226891506"></textarea>
             </div>
             <div class="send">
                 <button class="send-item" type="submit">送信</button>
             </div>
         </form>
+
     </section>
+
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='./thanks.html';}"></iframe>
+
+
+    <p class="copyright">©2025 hinari</p>
+
+
+    <script>
+        $(function () {
+            $('.sp-btn').on('click', function () {
+                $('.sp-btn').toggleClass('open');
+                $('.sp-nav').fadeToggle();
+            })
+        })
+
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.rain_bg');
+            const columns = 10;
+
+            function createRain(rainClass, minSize, maxSize) {
+                const rain = document.createElement('span');
+                rain.className = `rain ${rainClass}`;
+                rain.style.animationDelay = `${Math.random() * 0.5}s`;
+
+                const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+                rain.style.width = `${size}px`;
+                rain.style.height = `${size}px`;
+                rain.style.left = Math.random() * 100 + '%';
+                container.appendChild(rain);
+
+                setTimeout(() => { rain.remove(); }, 8000);
+            }
+
+            setInterval(() => createRain('rain-1', 30, 50), 800);
+            setInterval(() => createRain('rain-2', 26, 44), 1100);
+        });
+    </script>
 </body>
 
 </html>

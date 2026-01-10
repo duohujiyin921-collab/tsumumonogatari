@@ -62,19 +62,17 @@
                 </ul>
             </nav>
 
-            <!-- <div class="sp-btn">
-                <span></span>
-                <span></span>
+            <div class="sp-btn">
                 <span></span>
             </div>
             <nav class="sp-nav">
-                <ul class="menu">
+                <ul>
                     <li><a href="./profile.html" data-item="プロフィール">profile</a></li>
                     <li><a href="./works.html" data-item="作品一覧">works</a>
                     </li>
                     <li><a href="./contact.html" data-item="お問い合わせ">contact</a></li>
                 </ul>
-            </nav> -->
+            </nav>
         </div>
     </section>
 
@@ -235,10 +233,18 @@
         <div class="profile-text-top">
             <h2 class="profile-title-top">profile</h2>
             <p class="profile-ruby">プロフィール</p>
+            <div class="name-top-pc">
+                <p class="name-top">たごひなり</p>
+                <p class="ruby">tagohinari</p>
+            </div>
+        </div>
+        <div class="name-top-sp">
             <p class="name-top">たごひなり</p>
             <p class="ruby">tagohinari</p>
         </div>
-        <a href="./profile.html" class="Btn">view more</a>
+        <div class="profile-btn-top">
+            <a href="./profile.html" class="Btn">view more</a>
+        </div>
     </section>
 
 
@@ -293,8 +299,11 @@
         <a href="#header"><img src="images/SVG/top.svg" alt="top"></a>
     </div>
 
+    <div class="rain_bg"></div>
 
     <script>
+
+
         $(function () {
             $('.sp-btn').on('click', function () {
                 $('.sp-btn').toggleClass('open');
@@ -322,18 +331,38 @@
             })
 
 
-
-
         })
 
-        $(document).snowfall({
-            flakeCount: 8, //降らせる数
-            minSize: 30, // 最小サイズ（数値）
-            maxSize: 60, // 最大サイズ（数値）
-            minSpeed: 1, // 最低速度（数値）
-            maxSpeed: 2, //最大速度
-            image //ここで画像を指定
+        window.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.rain_bg');
+            const columns = 10;
+
+            function createRain(rainClass, minSize, maxSize) {
+                const rain = document.createElement('span');
+                rain.className = `rain ${rainClass}`;
+                rain.style.animationDelay = `${Math.random() * 0.5}s`;
+
+                const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+                rain.style.width = `${size}px`;
+                rain.style.height = `${size}px`;
+                rain.style.left = Math.random() * 100 + '%';
+                container.appendChild(rain);
+
+                setTimeout(() => { rain.remove(); }, 8000);
+            }
+
+            setInterval(() => createRain('rain-1', 30, 50), 800);
+            setInterval(() => createRain('rain-2', 26, 44), 1100);
         });
+
+        // $(document).snowfall({
+        //     flakeCount: 8, //降らせる数
+        //     minSize: 30, // 最小サイズ（数値）
+        //     maxSize: 60, // 最大サイズ（数値）
+        //     minSpeed: 1, // 最低速度（数値）
+        //     maxSpeed: 2, //最大速度
+        //     image //ここで画像を指定
+        // });
 
         // $('.slider').slick({
         //     centerMode: true,
