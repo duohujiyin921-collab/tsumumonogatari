@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-    background-color: #ccdded;
+    background-color: #c9e0f3;
     max-width: 100%;
 }
 
@@ -67,7 +67,7 @@ nav ul li a::after {
     /* display: flex; */
 }
 
-nav ul li a:hover {
+.pc-nav ul li a:hover {
     margin-top: -60px;
     color: #f6f7f8;
 }
@@ -80,7 +80,7 @@ nav ul li a:hover {
 
 
 .title {
-    max-width: 720px;
+    max-width: 780px;
     margin: 0 auto;
     padding: 100px 20px 0 20px;
 }
@@ -93,7 +93,7 @@ nav ul li a:hover {
 
 .scroll_down {
     position: absolute;
-    bottom: -150px;
+    bottom: -17%;
     left: 50%;
 }
 
@@ -762,19 +762,23 @@ a {
     display: none;
 }
 
-.works-botton-color {
+/* .works-botton-color {
     font-size: 18px;
     font-family: "fot-tsukuardgothic-std", sans-serif;
     font-weight: 600;
-    padding-left: 55px;
-}
+    padding-left: 50px;
+} */
 
 .works-botton {
     font-size: 18px;
     font-family: "fot-tsukuardgothic-std", sans-serif;
     font-weight: 600;
     color: #f6f7f8;
-    padding-left: 30px;
+    padding-left: 50px;
+}
+
+.works-botton-main span.show {
+    color: #19448e;
 }
 
 .works {
@@ -1121,6 +1125,15 @@ td {
     font-family: "fot-tsukuardgothic-std", sans-serif;
     font-weight: 700;
     text-align: center;
+}
+
+.form-text {
+    font-size: 14px;
+    text-align: center;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .number-box {
@@ -1561,6 +1574,11 @@ td {
     }
 
 
+    .detail-text {
+        height: auto;
+    }
+
+
     .content {
         margin: 0 auto;
         font-size: 16px;
@@ -1570,6 +1588,7 @@ td {
         width: 442px;
         height: 544px;
         order: 2;
+        margin: 0 auto;
     }
 
     .box-sns img {
@@ -1580,6 +1599,7 @@ td {
         width: 442px;
         height: 380px;
         order: 4;
+        margin: 0 auto;
     }
 
     .box img {
@@ -1590,6 +1610,7 @@ td {
         width: 442px;
         height: 442px;
         order: 4;
+        margin: 0 auto;
     }
 
     .box-square img {
@@ -1601,6 +1622,7 @@ td {
         width: 442px;
         height: 365px;
         order: 2;
+        margin: 0 auto;
     }
 
 
@@ -1608,12 +1630,14 @@ td {
         width: 442px;
         height: 1684px;
         order: 4;
+        margin: 0 auto;
     }
 
     .box-rectangle-pc {
         width: 442px;
         height: 1523px;
         order: 4;
+        margin: 0 auto;
     }
 
 
@@ -1625,8 +1649,7 @@ td {
         margin: 0 auto;
         flex: 0;
         display: flex;
-        flex-direction: column;
-
+        display: contents;
     }
 
 
@@ -1700,7 +1723,7 @@ td {
         position: absolute;
         top: 66px;
         right: 57px;
-        z-index: 2;
+        z-index: 2000;
     }
 
     .sp-btn span {
@@ -1758,6 +1781,7 @@ td {
         width: 100%;
         height: 400vh;
         background: rgba(149, 172, 216, 1);
+        z-index: 1000;
     }
 
 
@@ -2052,6 +2076,13 @@ td {
     .contact-text {
         text-align: start;
         margin: 12px auto;
+    }
+
+    .form-text {
+        font-size: 12px;
+        width: 253px;
+        margin: 20px auto 0 auto;
+        line-height: 1.5;
     }
 
     .category-main {

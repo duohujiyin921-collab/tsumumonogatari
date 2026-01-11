@@ -78,6 +78,7 @@
     <section class="contact-main">
         <h2 class="contact-title">contact</h2>
         <p class="contact-sub-title">お問い合わせ</p>
+        <p class="form-text">以下のフォームに必要事項(*)をご入力のうえ、送信してください。</p>
         <div class="number-box">
             <div class="number">1</div>
             <div class="number-item">2</div>
@@ -87,7 +88,7 @@
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfgurpcux05ypibKgB88CPsuBtFySHMqGuqvNp3FHjaVRkf6w/formResponse"
             method="POST" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="contact-flex">
-                <label class="contact-text" for="">お問い合わせ種別</label>
+                <label class="contact-text" for="">お問い合わせ種別*</label>
                 <div class="category-main">
                     <input id="request" type="radio" value="制作物のご依頼について" name="entry.1947247424">
                     <label for="request">制作物のご依頼について</label>
@@ -100,12 +101,12 @@
                 </div>
             </div>
             <div class="contact-item">
-                <label class="contact-text" for="name">お名前</label>
+                <label class="contact-text" for="name">お名前*</label>
                 <input type="text" placeholder="山田 太郎" required="required" class="name-box" id="name"
                     name="entry.860177830">
             </div>
             <div class="contact-item">
-                <label class="contact-text" for="mail">メールアドレス</label>
+                <label class="contact-text" for="mail">メールアドレス*</label>
                 <input class="mail-box" type="email" required="required" placeholder="sample@gmail.com" id="mail"
                     name="entry.1518326848">
             </div>
@@ -114,7 +115,7 @@
                 <input class="tel-box" type="tel" placeholder="00000000000" id="tel" name="entry.1648122010">
             </div>
             <div class="contact-item">
-                <label class="contact-text" for="inpuiry">お問い合せ内容</label>
+                <label class="contact-text" for="inpuiry">お問い合せ内容*</label>
                 <textarea class="contact-box" id="inpuiry" required="required" rows="5" placeholder="お問い合せ内容をご記入ください"
                     name="entry.1226891506"></textarea>
             </div>
