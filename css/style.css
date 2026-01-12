@@ -1610,7 +1610,7 @@ td {
     }
 
     .detail-table {
-        width: 330px;
+        width: 260px;
     }
 
     th {
@@ -1630,13 +1630,13 @@ td {
 
     .content {
         margin: 0 auto;
-        font-size: 16px;
-        width: 340px;
+        font-size: 14px;
+        width: 260px;
     }
 
     .box-sns {
-        width: 400px;
-        height: 486px;
+        width: 300px;
+        height: 357px;
         order: 2;
         margin: 0 auto;
     }
@@ -1646,8 +1646,8 @@ td {
     }
 
     .box {
-        width: 400px;
-        height: 342px;
+        width: 300px;
+        height: 268px;
         order: 4;
         margin: 0 auto;
     }
@@ -1657,8 +1657,8 @@ td {
     }
 
     .box-square {
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
         order: 4;
         margin: 0 auto;
     }
@@ -1669,23 +1669,23 @@ td {
     }
 
     .box-mockup {
-        width: 400px;
-        height: 335px;
+        width: 300px;
+        height: 236px;
         order: 2;
         margin: 0 auto;
     }
 
 
     .box-rectangle {
-        width: 400px;
-        height: 1517px;
+        width: 300px;
+        height: 1120px;
         order: 4;
         margin: 0 auto;
     }
 
     .box-rectangle-pc {
-        width: 400px;
-        height: 1372px;
+        width: 300px;
+        height: 1050px;
         order: 4;
         margin: 0 auto;
     }
@@ -1722,13 +1722,13 @@ td {
     }
 
     .prev a img {
-        width: 90px;
+        width: 63px;
         padding-left: 50px;
         margin-bottom: -5px;
     }
 
     .next a img {
-        width: 90px;
+        width: 63px;
         padding-right: 50px;
         margin-bottom: -5px;
     }
@@ -2112,23 +2112,23 @@ td {
 
 
     .Btn-detail {
-        width: 158px;
-        height: 34px;
+        width: 103px;
+        height: 29px;
         margin: 15% auto 14% auto;
         border: 1.5px solid #19448e;
-        font-size: 14px;
+        font-size: 12px;
     }
 
 
     .prev-text {
-        font-size: 15px;
-        left: 16%;
+        font-size: 14px;
+        left: 17%;
     }
 
     .next-text {
         top: 47%;
-        font-size: 15px;
-        right: 16%;
+        font-size: 14px;
+        right: 17%;
     }
 
 
@@ -2167,11 +2167,24 @@ td {
         margin: 0 auto;
     }
 
+
     .form-text {
         font-size: 12px;
         width: 253px;
         margin: 20px auto 0 auto;
         line-height: 1.5;
+    }
+
+    .name-box,
+    .mail-box,
+    .tel-box,
+    .contact-box {
+        width: 270px;
+    }
+
+    .send-item {
+        background-color: #19448e;
+        color: #f6f7f8;
     }
 
     .category-main {
