@@ -1912,16 +1912,17 @@ td {
         width: 40%;
         order: 2;
         margin-top: 119px;
+        min-width: 200px;
     }
 
     .text-turn {
-        left: -50px;
-        top: -80px;
+        left: -18%;
+        top: -34%;
     }
 
     .cat {
-        top: -10px;
-        left: 40px;
+        top: -2%;
+        left: 21%;
     }
 
 
@@ -1942,7 +1943,7 @@ td {
 
     .profile-btn-top {
         order: 4;
-        margin: 20px auto;
+        margin: 31px auto;
     }
 
 
@@ -1999,9 +2000,16 @@ td {
         margin: 0 14px 0 14px;
     }
 
-    .prev-arrow,
-    .next-arrow {
+    .prev-arrow {
         width: 51px;
+        left: 10%;
+        bottom: -82px;
+    }
+
+    .next-arrow {
+        right: 10%;
+        width: 51px;
+        bottom: -82px;
     }
 
     .contact-title-top {
@@ -2051,6 +2059,7 @@ td {
         width: 100%;
         text-align: center;
         margin: 200px auto 0 auto;
+        padding-right: 0;
     }
 
     .text {
