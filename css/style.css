@@ -1732,6 +1732,10 @@ td {
         margin-bottom: -5px;
     }
 
+    .thanks-text {
+        font-size: 40px;
+    }
+
 }
 
 
@@ -2196,11 +2200,12 @@ td {
     }
 
     .thanks-text {
-        font-size: 29px;
+        font-size: 24px;
+        line-height: 1.5;
     }
 
     .thanks-sub-text {
-        font-size: 20px;
+        font-size: 14px;
     }
 
 }
