@@ -2017,9 +2017,9 @@ td {
     .profile {
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
         justify-content: center;
-        margin-right: -20px;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .profile-main {
@@ -2039,17 +2039,15 @@ td {
     }
 
     .profile-photo {
-        top: 20%;
+        top: 64px;
         left: 55%;
         width: 100%;
     }
 
     .bio {
-        width: 90%;
+        width: 100%;
         text-align: center;
-        margin-top: 200px;
-        margin-right: 60px;
-        padding-right: 20px;
+        margin: 200px auto 0 auto;
     }
 
     .text {
