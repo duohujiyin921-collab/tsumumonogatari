@@ -93,7 +93,7 @@ nav ul li a::after {
 
 .scroll_down {
     position: absolute;
-    bottom: -17%;
+    bottom: -15%;
     left: 50%;
 }
 
@@ -220,6 +220,20 @@ nav ul li a::after {
     top: -72px;
     left: -185px;
     z-index: 1;
+}
+
+.text-turn svg {
+    animation: rotation 18s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .cat {
@@ -476,6 +490,10 @@ a {
     z-index: 1;
 }
 
+.period {
+    display: none;
+}
+
 .letter {
     margin: 0 auto;
     text-align: center;
@@ -561,6 +579,21 @@ a {
     top: -5%;
     z-index: 1;
 }
+
+.image-name svg {
+    animation: rotation 18s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .profile-photo {
     position: relative;
@@ -1202,6 +1235,14 @@ td {
     margin-top: 12px;
 }
 
+.contact-text-list {
+    flex: 0 0 25%;
+    font-size: 16px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
 .category-main {
     display: flex;
     flex-wrap: wrap;
@@ -1568,9 +1609,17 @@ td {
         background: #19448e;
     }
 
-    th,
+    .detail-table {
+        width: 330px;
+    }
+
+    th {
+        font-size: 16px;
+    }
+
     td {
         font-size: 16px;
+        padding: 10px 0 20px 20px;
     }
 
 
@@ -1582,11 +1631,12 @@ td {
     .content {
         margin: 0 auto;
         font-size: 16px;
+        width: 340px;
     }
 
     .box-sns {
-        width: 442px;
-        height: 544px;
+        width: 400px;
+        height: 486px;
         order: 2;
         margin: 0 auto;
     }
@@ -1596,8 +1646,8 @@ td {
     }
 
     .box {
-        width: 442px;
-        height: 380px;
+        width: 400px;
+        height: 342px;
         order: 4;
         margin: 0 auto;
     }
@@ -1607,8 +1657,8 @@ td {
     }
 
     .box-square {
-        width: 442px;
-        height: 442px;
+        width: 400px;
+        height: 400px;
         order: 4;
         margin: 0 auto;
     }
@@ -1619,23 +1669,23 @@ td {
     }
 
     .box-mockup {
-        width: 442px;
-        height: 365px;
+        width: 400px;
+        height: 335px;
         order: 2;
         margin: 0 auto;
     }
 
 
     .box-rectangle {
-        width: 442px;
-        height: 1684px;
+        width: 400px;
+        height: 1517px;
         order: 4;
         margin: 0 auto;
     }
 
     .box-rectangle-pc {
-        width: 442px;
-        height: 1523px;
+        width: 400px;
+        height: 1372px;
         order: 4;
         margin: 0 auto;
     }
@@ -1674,11 +1724,13 @@ td {
     .prev a img {
         width: 90px;
         padding-left: 50px;
+        margin-bottom: -5px;
     }
 
     .next a img {
         width: 90px;
         padding-right: 50px;
+        margin-bottom: -5px;
     }
 
 }
@@ -1701,8 +1753,8 @@ td {
 
 @media screen and (max-width:767px) {
     .site-name {
-        font-size: 33px;
-        margin: 55px 50px 0 70px;
+        font-size: 28px;
+        margin: 55px 20px 0 41px;
         font-family: "ta-shizuku", sans-serif;
     }
 
@@ -1722,13 +1774,13 @@ td {
         cursor: pointer;
         position: absolute;
         top: 66px;
-        right: 57px;
+        right: 50px;
         z-index: 2000;
     }
 
     .sp-btn span {
         display: block;
-        width: 33px;
+        width: 30px;
         height: 4px;
         background: #19448e;
         border-radius: 2px;
@@ -1743,7 +1795,7 @@ td {
     .sp-btn span::after {
         content: "";
         display: block;
-        width: 33px;
+        width: 30px;
         height: 4px;
         background: #19448e;
         border-radius: 2px;
@@ -1773,7 +1825,6 @@ td {
         transform: rotate(135deg);
     }
 
-
     .sp-nav {
         position: absolute;
         top: 0;
@@ -1782,6 +1833,7 @@ td {
         height: 400vh;
         background: rgba(149, 172, 216, 1);
         z-index: 1000;
+        position: fixed;
     }
 
 
@@ -1814,33 +1866,47 @@ td {
         max-width: 600px;
     }
 
+    .scroll_down {
+        bottom: -1%;
+    }
+
     .scroll_down a {
-        font-size: 17px;
-        left: -30px;
+        font-size: 16px;
+        left: -32px;
     }
 
     .sab-title {
-        font-size: 20px;
+        font-size: 18px;
         /* width: 170px; */
         line-height: 1.6;
         margin: 500px auto 0 auto;
     }
 
-    .copy,
+    .copy {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
     .contact-text-top {
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 64px;
+    }
+
+    .period {
+        display: inline-block;
     }
 
     .profile-top {
         flex-direction: column;
         justify-content: flex-start;
-        gap: 22px;
+        gap: 30px;
     }
 
 
     .profile-top-image {
-        width: 44%;
+        width: 40%;
         order: 2;
         margin-top: 119px;
     }
@@ -1868,6 +1934,7 @@ td {
 
     .name-top {
         margin-top: 0;
+        font-size: 24px;
     }
 
     .profile-btn-top {
@@ -1878,23 +1945,25 @@ td {
 
     .Btn {
         position: static;
-        top: 0;
-        right: 0;
+        height: 36px;
+        width: 148px;
+        font-size: 14px;
+        background-color: #19448e;
+        color: #f6f7f8;
     }
 
     .profile-text-top {
         text-align: center;
-        margin-top: 30px;
+        margin-top: 60px;
     }
 
     .profile-title-top,
     .works-title-top,
-    .contact-title-top,
     .profile-title,
     .works-title,
-    .contact-title,
-    .skill-title {
-        font-size: 32px;
+    .skill-title,
+    .contact-title {
+        font-size: 28px;
     }
 
     .profile-ruby,
@@ -1905,17 +1974,22 @@ td {
     .works-sub-title,
     .contact-sub-title,
     .skill-sub-title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
 
     .name {
-        font-size: 27px;
+        font-size: 25px;
     }
 
 
     .Btn-works {
-        margin: 140px auto 160px auto;
+        margin: 96px auto 93px auto;
+        height: 36px;
+        width: 148px;
+        font-size: 14px;
+        background-color: #19448e;
+        color: #f6f7f8;
     }
 
     .slider-box {
@@ -1927,8 +2001,13 @@ td {
         width: 51px;
     }
 
+    .contact-title-top {
+        font-size: 28px;
+        padding-top: 73px;
+    }
+
     .letter {
-        width: 27%;
+        width: 37%;
     }
 
     .copyright {
@@ -1939,6 +2018,8 @@ td {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
+        justify-content: center;
+        margin-right: -20px;
     }
 
     .profile-main {
@@ -1965,25 +2046,26 @@ td {
 
     .bio {
         width: 90%;
-        padding: 0 10px;
         text-align: center;
-        margin: 200px 30px 0 30px;
+        margin-top: 200px;
+        margin-right: 60px;
+        padding-right: 20px;
     }
 
     .text {
-        font-size: 17px;
+        font-size: 16px;
         margin-top: 50px;
         padding-left: 50px;
         padding-right: 50px;
     }
 
     .hobby {
-        font-size: 23px;
+        font-size: 20px;
         margin-top: 60px;
     }
 
     .hobby-text {
-        font-size: 17px;
+        font-size: 16px;
         margin-top: 20px;
     }
 
@@ -2001,7 +2083,7 @@ td {
     }
 
     .top a img {
-        width: 90px;
+        width: 70px;
     }
 
     .works-botton-unity {
@@ -2012,27 +2094,24 @@ td {
         flex-direction: column;
     }
 
-    .works-botton-color {
-        padding-left: 30px;
-        padding-bottom: 15px;
-        font-size: 23px;
-    }
 
     .works-botton {
         padding-bottom: 15px;
-        font-size: 23px;
+        font-size: 19px;
     }
 
 
     .works-box {
-        width: 359px;
-        height: 410px;
+        width: 330px;
+        height: 375px;
     }
 
     .works-opus,
     .hashtag {
         padding-top: 10px;
     }
+
+
 
     .Btn-detail {
         width: 158px;
@@ -2075,7 +2154,19 @@ td {
 
     .contact-text {
         text-align: start;
-        margin: 12px auto;
+        margin: 10px;
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 280px;
+        margin: 30px auto;
+    }
+
+    .contact-text-list {
+        margin: 0 auto;
     }
 
     .form-text {
